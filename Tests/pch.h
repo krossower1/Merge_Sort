@@ -1,5 +1,8 @@
+#pragma once
+#include "gtest/gtest.h"
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -52,7 +55,7 @@ private:
         }
     }
 public:
-    merge_sort(vector<skladowe> x): arr(x) { }
+    merge_sort(vector<skladowe> x) : arr(x) {}
 
     void mergesort() {
         int lewo = 0;
