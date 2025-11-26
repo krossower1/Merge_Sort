@@ -5,7 +5,14 @@ template class merge_sort<int>;
 template class merge_sort<double>;
 template class merge_sort<char>;
 
+/**
+* @brief Initiate the MergeSort
+*
+**/
+
 template <typename skladowe>
-vector<skladowe> merge_sort<skladowe>::ret() {
-    return arr;
+void merge_sort<skladowe>::mergesort() {
+    int lewo = 0;
+    int prawo = arr.size() - 1;
+    dziel(arr, lewo, prawo);
 }
