@@ -1,7 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
+
+/**
+* @brief Define the class holding the array and the workings of the MergeSort.
+*
+**/
 
 template <typename skladowe>
 class merge_sort {
@@ -52,21 +58,8 @@ private:
         }
     }
 public:
-    merge_sort(vector<skladowe> x): arr(x) { }
-
-    void mergesort() {
-        int lewo = 0;
-        int prawo = arr.size() - 1;
-        dziel(arr, lewo, prawo);
-    }
-
-    vector<skladowe> ret() {
-        return arr;
-    }
-
-    void print() {
-        for (int i = 0; i < arr.size(); i++)
-            cout << arr[i] << " ";
-        cout << endl;
-    }
+    merge_sort(vector<skladowe> x) : arr(x) {}
+    void mergesort();
+    vector<skladowe> ret();
+    void print();
 };
